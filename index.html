@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef4ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Left Side */
+
+        .left {
+            width: 35%;
+            background: linear-gradient(135deg, #17458f, #4169e1);
+            color: white;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .left h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .left h1 span {
+            color: #61d4ff;
+        }
+
+        .left p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .features p {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .illustration {
+            text-align: center;
+            font-size: 100px;
+            margin-top: 30px;
+        }
+
+        /* Right Side */
+
+        .right {
+            width: 65%;
+            padding: 40px 45px;
+        }
+
+        .right h1 {
+            color: #102c5c;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #65748b;
+            margin-bottom: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #102c5c;
+            font-weight: bold;
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d3deef;
+            border-radius: 9px;
+            outline: none;
+            font-size: 14px;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #0866ff;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 75px;
+        }
+
+        .terms {
+            margin: 22px 0;
+            font-size: 13px;
+            color: #53647e;
+        }
+
+        .terms input {
+            margin-right: 6px;
+        }
+
+        .terms a {
+            color: #0866ff;
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 9px;
+            background: #0866f5;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #064dc0;
+        }
+
+        .login {
+            text-align: center;
+            margin-top: 22px;
+            color: #65748b;
+            font-size: 14px;
+        }
+
+        .login a {
+            color: #0866ff;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        /* Mobile Responsive */
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                padding: 30px 25px;
+            }
+
+            .left h1 {
+                font-size: 30px;
+            }
+
+            .illustration {
+                font-size: 65px;
+                margin-top: 10px;
+            }
+
+            .right {
+                padding: 30px 22px;
+            }
+
+            .right h1 {
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 12px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+
+            .left h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Left Section -->
+
+        <div class="left">
+
+            <div>
+                <h2>🎓 Student Portal</h2>
+
+                <h1>
+                    Student<br>
+                    Registration<br>
+                    <span>Form</span>
+                </h1>
+
+                <p>
+                    Join our community and take the
+                    first step towards a brighter future.
+                </p>
+
+                <div class="features">
+                    <p>🎓 Quality Education</p>
+                    <p>📊 Better Opportunities</p>
+                    <p>👥 Supportive Community</p>
+                </div>
+            </div>
+
+            <div class="illustration">
+                📚
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+
+        <div class="right">
+
+            <h1>👤 Student Registration</h1>
+
+            <p class="subtitle">
+                Fill in the details below to register.
+            </p>
+
+            <form action="#" method="post">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name"
+                               name="name"
+                               placeholder="Enter your full name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email"
+                               name="email"
+                               placeholder="Enter your email address"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone"
+                               name="phone"
+                               placeholder="Enter your phone number"
+                               pattern="[0-9]{10}"
+                               title="Enter a 10-digit phone number"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob"
+                               name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course *</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="bca">BCA</option>
+                            <option value="mca">MCA</option>
+                            <option value="bsc">B.Sc</option>
+                            <option value="mba">MBA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department"
+                                name="department" required>
+                            <option value="">Select Department</option>
+                            <option value="cse">Computer Science</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ece">Electronics</option>
+                            <option value="mechanical">Mechanical</option>
+                            <option value="civil">Civil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Academic Year *</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Address *</label>
+                        <textarea id="address"
+                                  name="address"
+                                  placeholder="Enter your full address"
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" id="password"
+                               name="password"
+                               placeholder="Create a password"
+                               minlength="8"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm">Confirm Password *</label>
+                        <input type="password" id="confirm"
+                               name="confirm"
+                               placeholder="Confirm your password"
+                               minlength="8"
+                               required>
+                    </div>
+
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms"
+                           name="terms" required>
+                    <label for="terms">
+                        I agree to the
+                        <a href="#">Terms and Conditions</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit">Register Now →</button>
+
+                <div class="login">
+                    Already have an account?
+                    <a href="#">Login</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
